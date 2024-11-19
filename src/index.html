@@ -4,26 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
     <link rel="shortcut icon" href="./4geeks.ico" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      body {
+        background-color: green;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .card {
+        background-color: white;
+        width: 200px;
+        border: 1px solid black;
+        font-size: 75px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 20px 0px #0000.3;
+      }
+      .number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .bottomSymbol {
+        display: flex;
+        justify-content: start;
+        transform: rotate(180deg);
+      }
+      .symbol {
+        margin: 0 10px 0 10px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container">
+      <div class="card">
+        <div id="topIcon" class="symbol"></div>
+        <div id="cardNumber" class="number"></div>
+        <div id="botIcon" class="symbol bottomSymbol"></div>
       </div>
+    </div>
+    <div class="container">
+      <input id="widthInput" type="number" placeholder="Width" />
+      <input id="heigthInput" type="number" placeholder="Heigth" />
     </div>
   </body>
 </html>
